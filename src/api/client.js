@@ -1,7 +1,9 @@
 const axios = require('axios');
+const apiUrl = process.env.API_URL;
+
 
 const client = axios.create({
-  baseURL: 'http://localhost:8080/v1/',
+  baseURL: apiUrl,
   timeout: 4000,
   headers: {'X-Custom-Header': 'foobar'}
 });

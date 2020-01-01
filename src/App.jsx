@@ -1,14 +1,14 @@
 import React from 'react';
-import LoadTest from './components/common/LoadTest';
+import ReactBreakpoints from 'react-breakpoints';
+import { breakpoints } from './theme';
+import Layout from './components/container/Layout';
 
 const App = () => (
-  <div>
-    <h1>Hello World</h1>
-    <LoadTest />
-  </div>
+  <ReactBreakpoints breakpoints={breakpoints}>
+    <Layout>
+      <div style={{ width: '100%', height: '100%', backgroundColor: 'pink' }} />
+    </Layout>
+  </ReactBreakpoints>
 );
-
-App.propTypes = {
-};
 
 export default App;

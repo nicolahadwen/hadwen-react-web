@@ -21,6 +21,10 @@ module.exports = {
       }
     ]
   },
+  devServer: {
+    publicPath: '/',
+    historyApiFallback: true
+  },
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/index.html",
@@ -29,7 +33,6 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env':{
         'PRODUCTION': JSON.stringify(true),
-        // todo: switch to prod
         'API_URL': JSON.stringify('http://localhost:8080/v1/')
       }
     })

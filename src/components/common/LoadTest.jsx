@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { login} from '../../api/login';
+import { auth} from '../../api/auth';
 
 const LoadTestComponent = () => {
   const [state, setState] = useState({
@@ -8,7 +8,7 @@ const LoadTestComponent = () => {
     isLoading: false
   });
   const fetchData = async () => {
-    return await login();
+    return await auth();
   };
   useEffect(() => {
     fetchData()

@@ -1,6 +1,8 @@
 import client from './client';
 
-const login = async () => {
+const login = async ({
+
+}) => {
   return client.post(
     '/login',
     {

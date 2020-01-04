@@ -1,5 +1,7 @@
 import breakpoints from './breakpoints';
+import colours from './colours';
 
-module.exports = {
+export {
+  colours,
   breakpoints
 };

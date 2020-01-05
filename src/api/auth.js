@@ -1,13 +1,14 @@
 import client from './client';
 
 const login = async ({
-
+  email,
+  password
 }) => {
   return client.post(
     '/login',
     {
-      "email": "nicolahadwen@gmail.com",
-      "password": "test1234!"
+      email,
+      password
     });
 };
 

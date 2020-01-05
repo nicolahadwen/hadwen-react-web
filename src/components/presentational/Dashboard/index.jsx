@@ -14,14 +14,7 @@ const Container = styled(VerticalBox)`
 `;
 
 const DashboardComponent = ({
-  login,
-  isLoggingIn,
-  isLoggedIn
 }) => {
-  const onClick = () => login({
-    "email": "nicola+2@test.com",
-    "password": "test-password"
-  });
   return (
     <Container>
       <HorizontalBox center={true}>
@@ -29,13 +22,6 @@ const DashboardComponent = ({
           <Typography variant="h1">
             Dashboard
           </Typography>
-          <Typography variant="h6">
-            {isLoggingIn ? 'isLoggingIn' : 'not logging in' }
-          </Typography>
-          <Typography variant="h6">
-            {isLoggedIn ? 'isLoggedIn' : 'not logged in' }
-          </Typography>
-          <button onClick={onClick}>click to change state</button>
         </VerticalBox>
       </HorizontalBox>
     </Container>

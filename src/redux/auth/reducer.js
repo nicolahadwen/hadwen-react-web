@@ -22,7 +22,8 @@ export default (state=initialState, action) => {
       return {
         ...state,
         isLoggingIn: false,
-        isLoggedIn: false
+        isLoggedIn: false,
+        error: action.payload
       };
     default:
       return state;

@@ -22,14 +22,14 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: "./src/index.html",
+      template: "./src/client/index.html",
       filename: "./index.html"
     }),
     new webpack.DefinePlugin({
       'process.env':{
         'PRODUCTION': JSON.stringify(false),
         // todo: switch to prod
-        'API_URL': JSON.stringify('http://localhost:8080/v1')
+        'API_URL': JSON.stringify('http://34.73.149.14:8080/v1')
       }
     })
   ],

@@ -1,4 +1,4 @@
-import actions from './actions';
+import actions from './action';
 import store from './store';
 import reducer from './reducer';
 

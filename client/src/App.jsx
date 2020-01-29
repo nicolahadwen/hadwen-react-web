@@ -12,11 +12,11 @@ import { store } from './redux';
 const App = () => (
   <ReactBreakpoints breakpoints={breakpoints}>
     <Provider store={store}>
-      <Layout>
-        <Router>
+      <Router>
+        <Layout>
           <Routes />
-        </Router>
-      </Layout>
+        </Layout>
+      </Router>
     </Provider>
   </ReactBreakpoints>
 );

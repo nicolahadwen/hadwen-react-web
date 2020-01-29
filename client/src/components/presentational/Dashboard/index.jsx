@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import VerticalBox from '../../common/box/VerticalBox';
-import Typography from '@material-ui/core/Typography';
+import Typography from '@material-ui/core/Typography/index';
 
 import { colours } from '../../../theme';
 import HorizontalBox from '../../common/box/HorizontalBox';

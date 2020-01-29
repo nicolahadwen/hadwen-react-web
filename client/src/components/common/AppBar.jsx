@@ -1,12 +1,13 @@
 import React from 'react';
 
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
+import { makeStyles } from '@material-ui/core/styles/index';
+import AppBar from '@material-ui/core/AppBar/index';
+import Toolbar from '@material-ui/core/Toolbar/index';
+import Typography from '@material-ui/core/Typography/index';
+import Button from '@material-ui/core/Button/index';
+import IconButton from '@material-ui/core/IconButton/index';
 import MenuIcon from '@material-ui/icons/Menu';
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -35,6 +36,7 @@ const AppBarComponent = () => {
             News
           </Typography>
           <Button color="inherit">Login</Button>
+          <Link to={'/user'}>Create User</Link>
         </Toolbar>
       </AppBar>
     </div>

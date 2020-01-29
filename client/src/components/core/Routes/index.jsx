@@ -7,6 +7,7 @@ import {
 import AccountSettings from '../../presentational/AccountSettings';
 import Dashboard from '../../presentational/Dashboard';
 import Login from '../../presentational/Login';
+import UserManagement from '../../presentational/UserManagement';
 
 const Routes = () => (
   <Switch>
@@ -15,6 +16,9 @@ const Routes = () => (
     </Route>
     <Route path="/login">
       <Login />
+    </Route>
+    <Route path="/user">
+      <UserManagement />
     </Route>
     <Route path="/">
       <Dashboard />

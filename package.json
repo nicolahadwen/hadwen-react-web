@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack-dev-server --env dev --hot --port 8081 --open --mode development",
     "build": "webpack --env prod --mode production",
-    "start": "node index.js"
+    "start": "node index.js",
+    "prod-test": "yarn build && yarn start"
   },
   "keywords": [],
   "author": "",

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import VerticalBox from '../../common/box/VerticalBox';
-import Typography from '@material-ui/core/Typography/index';
+import Typography from '@material-ui/core/Typography';
 
 import { colours } from '../../../theme';
 import HorizontalBox from '../../common/box/HorizontalBox';

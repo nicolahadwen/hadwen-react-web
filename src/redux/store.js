@@ -1,5 +1,5 @@
-import { createStore, applyMiddleware } from 'redux/index'
-import thunk from 'redux-thunk/index'
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
 
 import reducer from './reducer';
 

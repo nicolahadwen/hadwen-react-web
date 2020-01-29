@@ -5,10 +5,6 @@ const createUser = async ({
   firstName,
   lastName
 }) => {
-  console.log("API")
-  console.log('firstName: ', firstName);
-  console.log('lastName: ', lastName);
-  console.log('email: ', email);
   return client.post(
     '/user', {
       email,

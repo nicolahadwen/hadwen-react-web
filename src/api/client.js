@@ -1,4 +1,4 @@
-const axios = require('axios/index');
+const axios = require('axios');
 const apiUrl = process.env.API_URL;
 
 

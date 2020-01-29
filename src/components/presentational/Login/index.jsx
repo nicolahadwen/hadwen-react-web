@@ -1,14 +1,14 @@
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
-import TextField from '@material-ui/core/TextField/index';
-import Typography from '@material-ui/core/Typography/index';
+import TextField from '@material-ui/core/TextField';
+import Typography from '@material-ui/core/Typography';
 import styled from 'styled-components';
 
 import {colours} from '../../../theme';
 import VerticalBox from '../../common/box/VerticalBox';
 import HorizontalBox from '../../common/box/HorizontalBox';
 
-import { createUser as createUserAction} from '../../../redux/user/action';
+import {login as loginAction} from '../../../redux/auth/action';
 import VerticalPadding from '../../common/padding/VerticalPadding';
 
 const Container = styled(VerticalBox)`
@@ -17,26 +17,23 @@ const Container = styled(VerticalBox)`
 `;
 
 const LoginComponent = ({
-  createUser,
-  isCreatingUser,
-  createdUserId
+  login,
+  isLoggingIn,
+  isLoggedIn
 }) => {
   const [email, setEmail] = useState('');
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
+  const [password, setPassword] = useState('');
 
-  const onClick = () => createUser({
+  const onClick = () => login({
     email,
-    firstName,
-    lastName
+    password
   });
-
   return (
     <Container>
       <HorizontalBox center={true}>
         <VerticalBox>
           <Typography variant="h1">
-            User Management
+            Login
           </Typography>
           <TextField
             required
@@ -47,21 +44,16 @@ const LoginComponent = ({
           <VerticalPadding size={'20px'} />
           <TextField
             required
-            value={firstName}
-            label="First Name"
-            onChange={(event) => setFirstName(event.target.value)}/>
-          <VerticalPadding size={'20px'} />
-          <TextField
-            required
-            value={lastName}
-            label="Last Name"
-            onChange={(event) => setLastName(event.target.value)}/>
+            value={password}
+            label="Password"
+            type="password"
+            onChange={(event) => setPassword(event.target.value)}/>
           <VerticalPadding size={'20px'} />
           <Typography variant="h6">
-            {isCreatingUser ? 'Is Creating User' : 'Not Creating User'}
+            {isLoggingIn ? 'isLoggingIn' : 'not logging in'}
           </Typography>
           <Typography variant="h6">
-            {createdUserId ? createdUserId : 'No User Id'}
+            {isLoggedIn ? 'isLoggedIn' : 'not logged in'}
           </Typography>
           <button onClick={onClick}>click to change state</button>
         </VerticalBox>
@@ -71,15 +63,15 @@ const LoginComponent = ({
 };
 
 const mapStateToProps = state => {
-  const {user: { isCreatingUser, createdUserId }} = state;
+  const {auth: {isLoggingIn, isLoggedIn}} = state;
   return {
-    isCreatingUser,
-    createdUserId
+    isLoggingIn,
+    isLoggedIn
   }
 };
 
 const mapDispatchToProps = {
-  createUser: createUserAction
+  login: loginAction
 };
 
 export default connect(

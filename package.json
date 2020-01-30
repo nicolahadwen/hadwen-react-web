@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --env dev --hot --port 8081 --open --mode development",
     "build": "webpack --env prod --mode production",
-    "start": "node server.js",
-    "start-dev": "NODE_ENV=development node server.js"
+    "start": "NODE_ENV=development node server.js"
   },
   "keywords": [],
   "author": "",
@@ -43,6 +42,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "fs": "^0.0.1-security",
-    "https": "^1.0.0"
+    "https": "^1.0.0",
+    "path": "^0.12.7"
   }
 }

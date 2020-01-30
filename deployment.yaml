@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-ui-deployment
+  labels:
+    app: hadwen
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hadwen
+      tier: web-ui
+  template:
+    metadata:
+      labels:
+        app: hadwen
+        tier: web-ui
+    spec:
+      containers:
+        - image: hadwen/web-ui:0.0.00
+          name: web-ui
+          imagePullPolicy: "Always"
+          ports:
+            - containerPort: 80
+              protocol: TCP
+          resources:
+            limits:
+              memory: "200Mi"
+            requests:
+              memory: "100Mi"
+          env:
+            - name: "PORT"
+              value: "80"

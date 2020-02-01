@@ -29,8 +29,13 @@ spec:
             requests:
               memory: "100Mi"
           env:
-            - name: "PORT"
+            - name: PORT
               value: "443"
+            - name: API_URL
+                valueFrom:
+                  secretKeyRef:
+                    name: api-url
+                    key: url
           volumeMounts:
             # name must match the volume name below
             - name: https-certs

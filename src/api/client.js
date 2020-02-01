@@ -1,11 +1,8 @@
 const axios = require('axios');
-const apiUrl = process.env.API_URL;
-
 
 const client = axios.create({
-  baseURL: apiUrl,
-  timeout: 4000,
-  headers: {'X-Custom-Header': 'foobar'}
+  baseURL: process.env.API_URL,
+  headers: {'X-Correlation-Id': 'xyz'}
 });
 
 export default client;

@@ -6,3 +6,5 @@ package-lock.json
 server.cert
 server.key
 yarn-error.log
+cert.pem
+key.pem

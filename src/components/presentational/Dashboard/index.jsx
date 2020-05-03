@@ -29,7 +29,6 @@ const DashboardComponent = ({
 };
 
 const mapStateToProps = state => {
-  console.log('state: ', state);
   const { auth: { isLoggingIn, isLoggedIn} } = state;
   return {
     isLoggingIn,

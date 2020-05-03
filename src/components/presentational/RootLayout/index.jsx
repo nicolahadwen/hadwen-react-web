@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import VerticalBox from "../../common/box/VerticalBox";
-import AppBar from "../../common/AppBar";
+import TopBar from "../../core/TopBar";
 
 const Container = styled(VerticalBox)`
   position: fixed;
@@ -16,7 +16,7 @@ const LayoutComponent = ({
   children
 }) => (
   <Container>
-    <AppBar />
+    <TopBar />
     <VerticalBox>
       {children}
     </VerticalBox>
